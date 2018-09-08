@@ -24,6 +24,6 @@ import static org.hamcrest.Matchers.equalTo;
     @Test
     public void compute_fake_deluxe() {
       assertThat(fizzBuzzSolution.fizzBuzz(33), equalTo("fizz fake deluxe"));
-      assertThat(fizzBuzzSolution.fizzBuzz(45), equalTo("buzz deluxe"));
+      assertThat(fizzBuzzSolution.fizzBuzz(50), equalTo("buzz deluxe"));
     }
   }
