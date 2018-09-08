@@ -30,7 +30,7 @@ public class FizzBuzzSolution {
     }
 
     // No remainder after division by five
-    private boolean isDeluxe(Integer number) {
+    boolean isDeluxe(Integer number) {
         if (number < 10) {
             return false;
         }
