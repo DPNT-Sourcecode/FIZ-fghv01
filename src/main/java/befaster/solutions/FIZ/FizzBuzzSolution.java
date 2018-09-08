@@ -2,6 +2,9 @@ package befaster.solutions.FIZ;
 
 public class FizzBuzzSolution {
 
+    public static final String FIZZ_NUMBER = "3";
+    public static final String BUZZ_NUMBER = "5";
+
     public String fizzBuzz(Integer number) {
         String answer = "";
         if (isFizz(number)) {
@@ -24,26 +27,21 @@ public class FizzBuzzSolution {
 
     // No remainder after division by three
     private boolean isFizz(Integer number) {
-        return (number % 3 == 0) || number.toString().contains("3");
+        return (number % 3 == 0) || number.toString().contains(FIZZ_NUMBER);
     }
 
     // No remainder after division by five
     private boolean isBuzz(Integer number) {
-        return number % 5 == 0 || number.toString().contains("5");
+        return number % 5 == 0 || number.toString().contains(BUZZ_NUMBER);
     }
 
-    // No remainder after division by five
+    // has the number it was divided by inside it
     boolean isDeluxe(Integer number) {
-        if (number < 10) {
-            return false;
+        if (isFizz(number) && number.toString().contains(FIZZ_NUMBER)
+            || isBuzz(number) && number.toString().contains(BUZZ_NUMBER)) {
+            return true;
         }
-        final String numberAsString = number.toString();
-        for (int i = 0; i < numberAsString.length(); i++) {
-            if(numberAsString.charAt(0) != numberAsString.charAt(i)) {
-                return false;
-            }
-        }
-        return true;
+        return false;
     }
 
 }
