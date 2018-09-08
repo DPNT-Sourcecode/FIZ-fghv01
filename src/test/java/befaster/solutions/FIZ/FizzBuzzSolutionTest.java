@@ -16,14 +16,14 @@ import static org.hamcrest.Matchers.equalTo;
 
     @Test
     public void compute_deluxe() {
-      assertThat(fizzBuzzSolution.isDeluxe(111), equalTo(true));
-      assertThat(fizzBuzzSolution.isDeluxe(3343), equalTo(false));
-      assertThat(fizzBuzzSolution.isDeluxe(3), equalTo(false));
+      assertThat(fizzBuzzSolution.isDeluxe(33), equalTo(true));
+      assertThat(fizzBuzzSolution.isDeluxe(3), equalTo(true));
+      assertThat(fizzBuzzSolution.isDeluxe(35), equalTo(true));
     }
 
     @Test
     public void compute_fake_deluxe() {
-      assertThat(fizzBuzzSolution.fizzBuzz(11), equalTo("fake deluxe"));
-      assertThat(fizzBuzzSolution.fizzBuzz(44444), equalTo("deluxe"));
+      assertThat(fizzBuzzSolution.fizzBuzz(33), equalTo("fizz fake deluxe"));
+      assertThat(fizzBuzzSolution.fizzBuzz(45), equalTo("buzz deluxe"));
     }
   }
