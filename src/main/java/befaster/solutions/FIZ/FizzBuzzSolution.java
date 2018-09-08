@@ -18,12 +18,12 @@ public class FizzBuzzSolution {
 
     // No remainder after division by three
     private boolean isFizz(Integer number) {
-        return number % 3 == 0;
+        return (number % 3 == 0) || number.toString().contains("3");
     }
 
     // No remainder after division by five
     private boolean isBuzz(Integer number) {
-        return number % 5 == 0;
+        return number % 5 == 0 || number.toString().contains("5");
     }
 
 }
