@@ -3,14 +3,14 @@ package befaster.solutions.FIZ;
 public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
-        String answer = null;
+        String answer = "";
         if (isFizz(number)) {
             answer = "fizz ";
         }
         if (isBuzz(number)) {
             answer += "buzz";
         }
-        if (null != answer) {
+        if (!answer.isEmpty()) {
             return answer.trim();
         }
         return number.toString();
