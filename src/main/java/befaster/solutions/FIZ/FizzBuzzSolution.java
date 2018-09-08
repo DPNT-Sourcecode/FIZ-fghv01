@@ -11,6 +11,9 @@ public class FizzBuzzSolution {
             answer += "buzz ";
         }
         if (isDeluxe(number)) {
+            if (number % 2 != 0) {
+                answer += "fake ";
+            }
             answer += "deluxe";
         }
         if (!answer.isEmpty()) {
