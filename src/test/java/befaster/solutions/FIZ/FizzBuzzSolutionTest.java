@@ -23,6 +23,7 @@ import static org.hamcrest.Matchers.equalTo;
 
     @Test
     public void compute_fake_deluxe() {
-      assertThat(fizzBuzzSolution.fizzBuzz(111), equalTo("fake deluxe"));
+      assertThat(fizzBuzzSolution.fizzBuzz(11), equalTo("fake deluxe"));
+      assertThat(fizzBuzzSolution.fizzBuzz(44444), equalTo("deluxe"));
     }
   }
