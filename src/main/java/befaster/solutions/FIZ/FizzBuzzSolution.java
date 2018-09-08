@@ -5,10 +5,10 @@ public class FizzBuzzSolution {
     public String fizzBuzz(Integer number) {
         String answer = null;
         if (isFizz(number)) {
-            answer = "Fizz ";
+            answer = "fizz ";
         }
         if (isBuzz(number)) {
-            answer += "Buzz";
+            answer += "buzz";
         }
         if (null != answer) {
             return answer.trim();
