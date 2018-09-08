@@ -37,8 +37,8 @@ public class FizzBuzzSolution {
 
     // has the number it was divided by inside it
     boolean isDeluxe(Integer number) {
-        if (isFizz(number) && number.toString().contains(FIZZ_NUMBER)
-            || isBuzz(number) && number.toString().contains(BUZZ_NUMBER)) {
+        if ((number % 3 == 0) && number.toString().contains(FIZZ_NUMBER)
+            || (number % 5 == 0) && number.toString().contains(BUZZ_NUMBER)) {
             return true;
         }
         return false;
