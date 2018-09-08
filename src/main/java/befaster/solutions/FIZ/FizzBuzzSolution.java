@@ -8,7 +8,10 @@ public class FizzBuzzSolution {
             answer = "fizz ";
         }
         if (isBuzz(number)) {
-            answer += "buzz";
+            answer += "buzz ";
+        }
+        if (isDeluxe(number)) {
+            answer += "deluxe";
         }
         if (!answer.isEmpty()) {
             return answer.trim();
@@ -24,6 +27,20 @@ public class FizzBuzzSolution {
     // No remainder after division by five
     private boolean isBuzz(Integer number) {
         return number % 5 == 0 || number.toString().contains("5");
+    }
+
+    // No remainder after division by five
+    private boolean isDeluxe(Integer number) {
+        if (number < 10) {
+            return false;
+        }
+        final String numberAsString = number.toString();
+        for (int i = 0; i < numberAsString.length(); i++) {
+            if(numberAsString.charAt(0) != numberAsString.charAt(i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
