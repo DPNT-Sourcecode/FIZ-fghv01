@@ -1,11 +1,19 @@
 package befaster.solutions.SUM;
 
-import befaster.runner.SolutionNotImplementedException;
-
 public class SumSolution {
 
     public int compute(int x, int y) {
-        throw new SolutionNotImplementedException();
+        if(inRange(x) && inRange(y)) {
+            return x + y;
+        }
+        return -1;
+    }
+
+    private boolean inRange(int a) {
+        if (a >= 0 && a<= 100) {
+            return true;
+        }
+        return false;
     }
 
 }
